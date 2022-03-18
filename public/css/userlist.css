@@ -1,0 +1,89 @@
+body {
+    margin-top: 150px;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro" ,"ヒラギノ角ゴ　Pro　W3" ,メイリオ ,meiyo, "MS Pゴシック","Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgb(5, 5, 19);
+    color: white;
+    text-align: center;
+}
+.form-control {
+    width: 40%;
+}
+.userlist-contents {
+    margin: 2% 5%;
+    padding: 2px;
+    border-bottom: 1px ridge rgba(241, 241, 241, 0.3);
+}
+.userlist-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.userlist-user-contents {
+    position: relative;
+    width: 20%;
+    max-width: 100px;
+}
+.userlist-user-contents::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.userlist-user-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.userlist-name-contents {
+    padding-left: 1%;
+}
+.userlist-username {
+    display: inline;
+}
+.cp_iptxt {
+	position: relative;
+	width: 50%;
+	margin: 5px 25%;
+}
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+.usersearch_input {
+    margin: 0 0 8px 0;
+}
+.search_button {
+  display: inline-block;
+  position: relative;
+  padding: 0.2em 0.6em;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #2772DB;
+  overflow: hidden;
+  transition: .3s ease;
+}
+.search_button:hover {
+  background-color: #2062bf;
+}
+.file_input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}

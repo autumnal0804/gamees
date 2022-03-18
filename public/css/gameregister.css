@@ -1,0 +1,53 @@
+body {
+    margin-top: 150px;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro" ,"ヒラギノ角ゴ　Pro　W3" ,メイリオ ,meiyo, "MS Pゴシック","Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgb(5, 5, 19);
+    color: white;
+    text-align: center;
+}
+.gameregister-game-contents {
+    display:block;
+}
+.gameregister-file-contents input{
+    display: none;
+}
+.gameregister-img{
+    width : 70%;
+    max-width: 800px;
+}
+.gameregister-coments-area textarea{
+    width : 40%;
+    height: auto;
+    max-width: 800px;
+}
+.cp_iptxt {
+	position: relative;
+	margin: 0 20%;
+}
+.cp_iptxt input[type=text] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 70%;
+	max-width: 700px;
+	margin-left: 5px;
+	padding: 0.3em;
+	transition: 0.3s;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+	outline: none;
+}
+.cp_iptxt input[type=text]:focus {
+	border-color: black;
+}
+.cp_iptxt i {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	padding: 9px 8px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+.cp_iptxt input[type=text]:focus + i {
+	color: #da3c41;
+}

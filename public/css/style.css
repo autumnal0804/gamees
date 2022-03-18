@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:150px 0;
+  font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+header {
+  height: 110px;
+  width: 100%;
+  padding: 0px 10px;
+  background: linear-gradient(to bottom, rgb(12 12 38) 0%, #030116 40%, #050026e6 150%), linear-gradient(to top, rgb(255 255 255) 0%, rgb(14 14 41 / 86%) 200%);
+  background-blend-mode: multiply;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  border-radius: 0px 0px 20px 20px;
+  border-width:1px;
+  border-style:solid;
+  border-color:white;
+}
+.header-img {
+  position: relative;
+}
+#home-img {
+  width: 95px;
+  height: 95px;
+  top: 3px;
+  left: 32px
+}
+#mygame-img {
+  width: 100px;
+  height: 100px;
+  left: 25px;
+  top: 4px;
+}
+#search-img {
+  width: 87px;
+  height: 86px;
+  top: 13px;
+  left: 23px
+}
+#logout-img {
+  width: 100px;
+  height: 100px;  
+  top: 4px;
+  left: 4px;
+}
+nav {
+  margin: 0 0 0 auto;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-contents{
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+  padding: 0 10px;
+}
+
+.sm {
+  display: none;
+}
+
+/**********************************　
+以下、ハンバーガーメニューの設定　
+************************************/
+
+@media (max-width: 519px) {
+
+  .pc {
+    display: none;
+  }
+  
+  header {
+    height:60px;
+  }
+
+  #hamburger {
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    margin: 0 0 0 auto;
+    height: 60px;
+    width: 60px;
+  }
+
+  .icon span {
+    position: absolute;
+    left: 15px;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 8px;
+    transition: ease 0.75s;
+  }
+
+  .icon span:nth-of-type(1) {
+    top: 16px;
+  }
+  .icon span:nth-of-type(2) {
+    top: 28px;
+  }
+  .icon span:nth-of-type(3) {
+    bottom: 16px;
+  }
+
+  .close span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 28px;
+  }
+
+  .close span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .close span:nth-of-type(3) {
+      transform: rotate(-45deg);
+      top: 28px;
+  }
+
+  .sm {
+      top: 60px;
+      left: 0px;
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      background-color: rgba(34, 49, 52, 0.9);
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  .header-img a {
+    text-align: center; 
+    border-top: solid 0.5px rgba(255, 255, 255, 0.6);
+  }
+}

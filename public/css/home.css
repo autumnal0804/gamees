@@ -1,0 +1,65 @@
+body {
+    margin-top: 150px;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro" ,"ヒラギノ角ゴ　Pro　W3" ,メイリオ ,meiyo, "MS Pゴシック","Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgb(5, 5, 19);
+    color: white;
+    text-align: center;
+}
+.title-name {
+    color: white;
+}
+.game-img-contents {
+    max-width: 300px;
+    position: relative;
+    margin: 0 auto;
+}
+.game-img-contents::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+ .game-img-contents img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}  
+.home-game-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.game-item {
+    width: 45%;
+    max-width: 400px;
+    padding: 0 20px;
+}
+.home-game-img {
+    border-radius: 20px;
+}
+.home-game-name {
+    font-size: clamp(10px, 7vw, 20px);
+}
+@media (max-width:519px) {
+    body {
+    margin-top: 80px;
+    }
+    .home-game-contents {
+        margin: 0 auto;
+    }
+    .home-game-img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .game-img-contents {
+        max-width: 480px;
+    }
+    .game-item {
+        width: 100%;
+    }
+}
