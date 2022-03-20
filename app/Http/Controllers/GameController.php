@@ -23,10 +23,9 @@ class GameController extends Controller
         //データベースのユーザーデータを取得する
         $cond_name = $request->cond_name;
         if ($cond_name !='') {
-            $users = User::where('name', 'like', '%' . $cond_name  . '%')->where('id' , '!=' , Auth::user()->id)->get();
-            //$users = User::where("id" , "!=" , Auth::user()->id)->paginate(10);
+            $users = User::where('name', 'like', '%' . $cond_name  . '%')->where("id" , "!=" , Auth::user()->id)->get();
         } else {
-            $users = User::where('id' , '!=' , Auth::user()->id)->get();
+            $users = User::where("id" , "!=" , Auth::user()->id)->get();
         }
         
         //取得したユーザーデータをviewに渡す
@@ -64,6 +63,9 @@ class GameController extends Controller
     }
     public function usergame()
     {
+        //データベースから指定したユーザーidだけを取得する
+        
+        //取得したデータをviewに渡す
         return view('usergame');
     }
 }
