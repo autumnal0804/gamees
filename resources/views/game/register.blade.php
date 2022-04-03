@@ -4,7 +4,7 @@
     
     @section('content')
     @push('css')
-        <link href="{{ asset('css/gameregister.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/game/register.css') }}" rel="stylesheet">
     @endpush
     <div class="container">
         <h2 class="title-name">{{ Auth::user()->name }}さんのゲーム登録</h2>

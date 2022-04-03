@@ -18,23 +18,23 @@ class GameController extends Controller
         return view('home',['posts' => $posts]);
     }
     
-    public function userlist(Request $request)
+    public function usersearch(Request $request)
     {
         //データベースのユーザーデータを取得する
         $cond_name = $request->cond_name;
         if ($cond_name !='') {
-            $users = User::where('name', 'like', '%' . $cond_name  . '%')->where("id" , "!=" , Auth::user()->id)->get();
+            $users = User::where('name', 'like', '%' . $cond_name . '%')->where("id" , "!=" , Auth::user()->id)->get();
         } else {
-            $users = User::where("id" , "!=" , Auth::user()->id)->get();
+            $users = User::inRandomOrder()->where("id" , "!=" , Auth::user()->id)->take(10)->get();
         }
         
         //取得したユーザーデータをviewに渡す
-        return view('userlist',['users' => $users, 'cond_name' => $cond_name,]);
+        return view('user/search',['users' => $users, 'cond_name' => $cond_name,]);
     }
     
     public function gameregister()
     {
-        return view('gameregister');
+        return view('game/register');
     }
     
     public function register()
@@ -61,11 +61,21 @@ class GameController extends Controller
         $game->save();
         return redirect('game/home');
     }
-    public function usergame()
+    public function usergame(Request $request)
     {
         //データベースから指定したユーザーidだけを取得する
-        
+        $user = User::find($request->id);
         //取得したデータをviewに渡す
-        return view('usergame');
+        return view('user/game',['user' => $user]);
+    }
+    public function gamesearch(Request $request)
+    {
+        $cond_game = $request->cond_game;
+        if ($cond_game !='') {
+            $games = Game::where('game_name', 'like', '%' . $cond_game . '%')->where("id" , "!=" , Auth::id())->get();
+        } else {
+            $games = Game::inRandomOrder()->where("id" , "!=" , Auth::id())->take(10)->get();
+        }
+        return view('game/search',['games' => $games, 'cond_game' => $cond_game,]);
     }
 }

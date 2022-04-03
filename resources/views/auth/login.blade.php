@@ -47,6 +47,11 @@
                                         </a>
                                     @endif
                                 </div>
+                                <div class="form-group row mb-0 register_button">
+                                    <a class="btn btn-link" href="{{ route('register') }}">
+                                        新規作成
+                                    </a>
+                                </div>
                                 <div class="col-md-8 offset-md-4 login_button">
                                 ログイン
                                     <button type="submit" class="file_input btn btn-primary">

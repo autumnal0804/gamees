@@ -25,10 +25,10 @@
                             <a class="header-contents" href="/game/home">HOME</a>
                         </li>
                         <li>
-                            <a class="header-contents" href="/game/gameregister">GAME</a>
+                            <a class="header-contents" href="/game/register">GAME</a>
                         </li>
                         <li>
-                            <a class="header-contents" href="/game/userlist">SEARCH</a>
+                            <a class="header-contents" href="/user/search">SEARCH</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -50,12 +50,12 @@
                             </a>
                         </li>
                         <li>
-                            <a class="header-contents" href="/game/gameregister">
+                            <a class="header-contents" href="/game/register">
                                 <img src="{{ asset('img/mygame.png') }}" alt="" class="header-img" id="mygame-img">
                             </a>
                         </li>
                         <li>
-                            <a class="header-contents" href="/game/userlist">
+                            <a class="header-contents" href="/user/search">
                                 <img src="{{ asset('img/search.png') }}" alt="" class="header-img" id="search-img">
                             </a>
                         </li>

@@ -77,7 +77,9 @@ ul {
 ************************************/
 
 @media (max-width: 519px) {
-
+  body {
+    margin-top: 80px;
+  }
   .pc {
     display: none;
   }

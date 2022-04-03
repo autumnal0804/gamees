@@ -6,11 +6,11 @@
     @push('css')
         <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     @endpush
-        <h2 class="title-name">{{ Auth::user()->name }}さんのゲーム</h2>
+        <h2 class="title-name">マイゲーム</h2>
         <div class="container">
             <div class="home-game-contents">
                 @foreach($posts as $game)
-                <div class="game-item">
+                <div class="home-game-item">
                     <div class="game-img-contents">
                         <img src="{{asset ('storage/image/' . $game->game_img) }}" alt="" class="home-game-img">
                     </div>
