@@ -9,7 +9,7 @@
         <div class="container">
         <h2 class="title-name">ゲーム検索</h2>
             <div class="input-group cp_iptxt">
-                <form action="{{ action('GameController@gamesearch') }}" method="get" enctype="multipart/form-data">
+                <form action="{{ action('GameController@gamesearch' ) }}" method="get" enctype="multipart/form-data">
                     <div class="gamesearch_input">
                         <input type="text" class="form-control" placeholder="ゲームを検索する" name="cond_game" value="{{ $cond_game }}">
                     </div>
@@ -22,16 +22,19 @@
                 </form>
             </div>
             <div class="game-search-contents">
-            @foreach($games as $game)
-                <div class="game-search-item">
-                    <div class="game-search-img-contents">
-                        <img src="{{asset ('storage/image/' . $game->game_img) }}" alt="" class="game-search-img">
+                @foreach($games as $game)
+                    <div class="game-search-item">
+                        <a href="" class="gamesearch-icon-contents">
+                            <img src="{{asset ('storage/user_img/' . $game->user->user_img) }}" alt="" class="gamesearch-user-icon">
+                        </a>
+                        <div class="game-search-img-contents">
+                            <img src="{{asset ('storage/image/' . $game->game_img) }}" alt="" class="game-search-img">
+                        </div>
+                        <p class="game-search-name">
+                            {{ \Str::limit($game->game_name, 50) }}
+                        </p>
                     </div>
-                    <p class="game-search-name">
-                        {{ \Str::limit($game->game_name, 50) }}
-                    </p>
-                </div>
-            @endforeach
+                @endforeach
             </div>
         </div>
     @endsection

@@ -31,10 +31,40 @@ body {
 .title-name {
     color: white;
 }
+.gamesearch-icon-contents {
+    width: 20%;
+    max-width: 100px;
+    position: absolute;
+    margin: 0 auto;
+}
+.gamesearch-icon-item {
+    
+}
+.gamesearch-icon-contents::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.gamesearch-user-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 10%;
+    left: -130%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}
 .game-search-img-contents {
     max-width: 300px;
     position: relative;
     margin: 0 auto;
+}
+.gamesearch-user-name {
+    position: absolute;
+    top: 65%;
+    left: 110%;
 }
 .game-search-img-contents::before {
     content: "";
@@ -55,6 +85,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 .game-search-item {
     width: 45%;
@@ -66,7 +97,9 @@ body {
 }
 .game-search-name {
     font-size: clamp(10px, 7vw, 20px);
-}
+    margin-top: 0px;
+    margin-bottom: 60px;
+    }
 .cp_iptxt {
 	position: relative;
 	width: 50%;

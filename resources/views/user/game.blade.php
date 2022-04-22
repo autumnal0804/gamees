@@ -6,7 +6,7 @@
     @push('css')
         <link href="{{ asset('css/user/game.css') }}" rel="stylesheet">
     @endpush
-        <h2 class="title-name">{{ $user->name }}</h2>
+        <h2 class="title-name">{{ $user->name }}さんのマイゲーム</h2>
         <div class="container">
             <div class="usergame-contents">
                 @foreach($user->games as $game)

@@ -12,5 +12,9 @@ class Game extends Model
     public static $rules = array(
         'game_img' => 'required',
         'game_name' => 'reqired',
-        );
+    );
+    
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

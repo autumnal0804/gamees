@@ -43,6 +43,7 @@ body {
 }
 .usergame-name {
     font-size: clamp(10px, 7vw, 20px);
+    margin-top: 0px;
 }
 @media (max-width:519px) {
     body {

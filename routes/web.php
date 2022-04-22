@@ -15,6 +15,7 @@ Route::group(['prefix' => 'game','middleware'=>'auth'], function() {
     Route::get('/register','GameController@gameregister');
     Route::post('/register','GameController@create');
     Route::get('/search','GameController@gamesearch');
+    Route::get('/detail','GameController@detail');
 });
 Route::group(['prefix' => 'user','middleware'=>'auth'], function() {
     Route::get('/search','GameController@usersearch');

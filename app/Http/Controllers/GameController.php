@@ -78,4 +78,8 @@ class GameController extends Controller
         }
         return view('game/search',['games' => $games, 'cond_game' => $cond_game,]);
     }
+    public function detail()
+    {
+        return view('game/detail');
+    }
 }
