@@ -24,12 +24,14 @@
             <div class="game-search-contents">
                 @foreach($games as $game)
                     <div class="game-search-item">
-                        <a href="" class="gamesearch-icon-contents">
+                        <a href="{{ action('UsersController@game' ,['id' => $game->user->id]) }}" class="gamesearch-icon-contents">
                             <img src="{{asset ('storage/user_img/' . $game->user->user_img) }}" alt="" class="gamesearch-user-icon">
                         </a>
-                        <div class="game-search-img-contents">
-                            <img src="{{asset ('storage/image/' . $game->game_img) }}" alt="" class="game-search-img">
-                        </div>
+                        <a href="{{ action('GameController@detail' ,['id' => $game->id]) }}">
+                            <div class="game-search-img-contents">
+                                <img src="{{asset ('storage/image/' . $game->game_img) }}" alt="" class="game-search-img">
+                            </div>
+                        </a>
                         <p class="game-search-name">
                             {{ \Str::limit($game->game_name, 50) }}
                         </p>

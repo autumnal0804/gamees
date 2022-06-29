@@ -37,9 +37,6 @@ body {
     position: absolute;
     margin: 0 auto;
 }
-.gamesearch-icon-item {
-    
-}
 .gamesearch-icon-contents::before {
     content: "";
     display: block;
@@ -142,9 +139,27 @@ body {
   opacity: 0;
   cursor: pointer;
 }
+@media (max-width:720px) {
+    .gamesearch-user-icon {
+        width: 80%;
+        height: 80%;
+    }
+}
+@media (max-width:615px) {
+    .gamesearch-user-icon {
+        width: 65%;
+        height: 65%;
+        left: -100%;
+    }
+}
 @media (max-width:519px) {
     body {
     margin-top: 80px;
+    }
+    .gamesearch-user-icon {
+        width: 100%;
+        height: 100%;
+        left: -175%;
     }
     .game-search-contents {
         margin: 0 auto;

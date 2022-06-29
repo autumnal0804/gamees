@@ -25,7 +25,7 @@
                             <a class="header-contents" href="/game/home">HOME</a>
                         </li>
                         <li>
-                            <a class="header-contents" href="/game/register">GAME</a>
+                            <a class="header-contents" href="/game/register">REGISTER</a>
                         </li>
                         <li>
                             <a class="header-contents" href="/game/search">GAMESEARCH</a>

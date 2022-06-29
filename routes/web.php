@@ -16,9 +16,11 @@ Route::group(['prefix' => 'game','middleware'=>'auth'], function() {
     Route::post('/register','GameController@create');
     Route::get('/search','GameController@gamesearch');
     Route::get('/detail','GameController@detail');
+    Route::post('/comments','GameController@game_comments');
 });
 Route::group(['prefix' => 'user','middleware'=>'auth'], function() {
-    Route::get('/search','GameController@usersearch');
-    Route::get('/game','GameController@usergame');
+    Route::get('/search','UsersController@search');
+    Route::get('/game','UsersController@game');
+    Route::post('/comments','UsersController@user_comments');
 });
 Auth::routes();

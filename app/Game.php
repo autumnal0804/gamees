@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
-    //
     protected $guarded = array('id');
     
     public static $rules = array(
@@ -16,5 +15,9 @@ class Game extends Model
     
     public function user(){
         return $this->belongsTo('App\User');
+    }
+    
+    public function game_comments(){
+        return $this->hasMany('App\GameComment');
     }
 }

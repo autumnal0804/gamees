@@ -7,7 +7,7 @@
         <link href="{{ asset('css/game/register.css') }}" rel="stylesheet">
     @endpush
     <div class="container">
-        <h2 class="title-name">{{ Auth::user()->name }}さんのゲーム登録</h2>
+        <h2 class="title-name">マイゲーム登録</h2>
         <div class="gameregister-game-contetnts">
             <form action="{{ action('GameController@create') }}" method="post" enctype="multipart/form-data">
                 <div class="gameregister-file-contents">

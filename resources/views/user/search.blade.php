@@ -9,7 +9,7 @@
         <div class="container">
             <h2 class="title-name">ユーザー検索</h2>
             <div class="input-group cp_iptxt">
-                <form action="{{ action('GameController@usersearch') }}" method="get" enctype="multipart/form-data">
+                <form action="{{ action('UsersController@search') }}" method="get" enctype="multipart/form-data">
                     <div class="usersearch_input">
                         <input type="text" class="form-control" placeholder="ユーザーを検索する" name="cond_name" value="{{ $cond_name }}">
                     </div>
@@ -23,7 +23,7 @@
             </div>
             @foreach($users as $user)
             <div class="userlist-contents">
-                <a href="{{ action('GameController@usergame' ,['id' => $user->id]) }}"  class="userlist-item">
+                <a href="{{ action('UsersController@game' ,['id' => $user->id]) }}"  class="userlist-item">
                     <div class="userlist-user-contents">
                         <img src="{{asset('storage/user_img/' . $user->user_img) }}" alt="" class="userlist-user-icon" >
                     </div>
